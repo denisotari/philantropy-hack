@@ -1,0 +1,19 @@
+<div class="ibox">
+    <div class="ibox-content">
+        <a href="{{ include.url }}" class="btn-link">
+            <h2 class="text-info">
+                {{ include.name }}
+            </h2>
+        </a>
+        <p>
+          <i class="fa fa-certificate"></i>&nbsp; {{ include.company }}
+        </p>
+        <p>
+          {{ include.lead }}
+        </p>
+        {% for sk in include.skills %}
+          <button class="btn btn-white btn-xs" type="button">{{ sk }}</button>
+        {% endfor %}
+
+    </div>
+</div>

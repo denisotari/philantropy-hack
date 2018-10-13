@@ -8,9 +8,9 @@ layout: defaults
     <div class="container">
       <div class="row">
         <div class="jumbotron bgimg1" >
-          <h1 class="display-1">Знания для новой жизни</h1>
+          <h1 class="display-1">Вакансии для новой жизни</h1>
           <hr class="my-4">
-          <p>Сотни материалов отобранных работодателями для получения новой профессии</p>
+          <p>Множество доступных технологических вакансий рядом с вами</p>
           <div class="row">
             <div class="col-md-4">
               <input type="text" name="" value="интересующий навык..." class="form-control">
@@ -20,14 +20,37 @@ layout: defaults
         </div>
       </div>
       <div class="row">
-        <h1>Рекомендованные публикации</h1>
+        <h1>Вакансии в технологических компаниях</h1>
         <hr>
 
       </div>
       <div class="row">
-        {% for post in site.posts %}
-          {% include article-block.html href="post.url" title=post.title lead=post.lead tags=post.tags state=post.state type=post.type %}
-        {% endfor %}
+        <div class="col-md-3">
+          <ul class="left-columns">
+            <h2>Категории:</h2>
+            <li>
+              <a href="#">Мало опыта</a>
+            </li>
+            <li>
+              <a href="#">Проектная работа</a>
+            </li>
+            <li>
+              <a href="#">Front-end вакансии</a>
+            </li>
+            <li>
+              <a href="#">Back-end вакансии</a>
+            </li>
+            <li>
+              <a href="#">Мобильная разработка</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-md-9">
+          {% for vac in site.vacancies %}
+            {% include vacancie-block.html url=vac.url name=vac.name company=vac.company lead=vac.lead skills=vac.skills%}
+          {% endfor %}
+        </div>
       </div>
     </div>
 
