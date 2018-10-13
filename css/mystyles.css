@@ -1,0 +1,9 @@
+.bgimg1 {
+  color: #FFF;
+  background-image: url("/img/header1.jpg");
+}
+
+.bgimg1 .form-control {
+  color: #DDD;
+  height: 45px;
+}
